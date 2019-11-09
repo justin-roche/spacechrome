@@ -1,5 +1,5 @@
 # spacechrome
-spacemacs interface for chrome
+Spacemacs interface for Chrome
 
 This is a chrome-specific fork of MenuHammer: https://github.com/FryJay/MenuHammer
 
