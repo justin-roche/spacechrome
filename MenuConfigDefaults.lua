@@ -1,13 +1,9 @@
 
 spoonPath = hs.spoons.scriptPath()
 
-dofile(spoonPath.."chrome/chrome.lua")
-dofile(spoonPath.."chrome/panels.lua")
-dofile(spoonPath.."chrome/enter.lua")
-dofile(spoonPath.."chrome/mouse.lua")
-dofile(spoonPath.."chrome/window.lua")
 
 dofile(spoonPath.."menus/elementsMenu.lua")
+
 dofile(spoonPath.."menus/panelsMenu.lua")
 dofile(spoonPath.."menus/commandMenu.lua")
 dofile(spoonPath.."menus/consoleMenu.lua")
@@ -17,6 +13,19 @@ dofile(spoonPath.."menus/networkMenu.lua")
 dofile(spoonPath.."menus/applicationMenu.lua")
 dofile(spoonPath.."menus/windowsMenu.lua")
 dofile(spoonPath.."menus/chromeMenu.lua")
+
+dofile(spoonPath.."chrome/chrome.lua")
+dofile(spoonPath.."chrome/panels.lua")
+dofile(spoonPath.."chrome/enter.lua")
+dofile(spoonPath.."chrome/mouse.lua")
+dofile(spoonPath.."chrome/window.lua")
+dofile(spoonPath.."chrome/console.lua")
+dofile(spoonPath.."chrome/common.lua")
+dofile(spoonPath.."chrome/enter.lua")
+dofile(spoonPath.."chrome/keys.lua")
+dofile(spoonPath.."chrome/start.lua")
+dofile(spoonPath.."chrome/utilities.lua")
+dofile(spoonPath.."chrome/console.lua")
 ----------------------------------------------------------------------------------------------------
 --------------------------------------- General Config ---------------------------------------------
 ----------------------------------------------------------------------------------------------------

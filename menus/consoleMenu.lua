@@ -9,7 +9,7 @@ chrome_consoleMenuItems = {
       end
   }}},
   {cons.cat.action, '', 'l', "log", {
-     {cons.act.func, doConsoleLog
+     {cons.act.func, enterConsolePanel
   }}},
 
   {cons.cat.action, '', 'f', "filter", {

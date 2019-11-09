@@ -25,21 +25,21 @@ chromeMenuItems = {
   {cons.cat.action, '', 'E', 'Elements', {
      {cons.act.func,
       function() 
-        openElements()
+        enterElementsPanel()
       end
      }
   }},
   {cons.cat.action, '', 'S', 'Sources', {
      {cons.act.func,
       function() 
-        doSourcesCode()
+        enterSourcesPanel()
       end
      }
   }}, 
   {cons.cat.action, '', 'C', 'Console', {
      {cons.act.func,
       function() 
-        doConsoleLog()
+        enterConsolePanel()
       end
      }
   }},
@@ -52,7 +52,7 @@ chromeMenuItems = {
   {cons.cat.action, '', 'N', 'Network', {
      {cons.act.func,
       function() 
-        doNetworkItems()
+        enterNetworkPanel()
       end
      }
      -- {cons.act.menu, networkMenu}
@@ -60,7 +60,7 @@ chromeMenuItems = {
   {cons.cat.action, '', 'A', 'Application', {
      {cons.act.func,
       function() 
-        doApplication()
+        enterApplicationPanel()
       end
      }
      -- {cons.act.menu, networkMenu}
