@@ -22,7 +22,7 @@ function ensureDevTools()
   else
     hs.window.focus(w)
   end
-getDevToolsType()
+  getDevToolsType()
 end
 
 function getDevToolsType()
