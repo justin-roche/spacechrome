@@ -1,30 +1,6 @@
 devtoolsState = 'elementsMenu'
 devtoolsType = 'web'
 
--- window management
-function toggleDock()
-  hs.eventtap.keyStroke("cmd shift", "d", 500000)
-end
-
-function ensureUndocked()
-  w = hs.window.find("DevTools")
-  if w == null then
-    print("undocking")
-    toggleDock()
-  end
-end
-
-function ensureDevTools() 
-  w = hs.window.find("DevTools")
-  if w == null then
-    hs.eventtap.keyStroke("cmd alt", "i", 500000)
-    ensureUndocked()
-  else
-    hs.window.focus(w)
-  end
-  getDevToolsType()
-end
-
 function getDevToolsType()
   w = hs.window.find("DevTools")
   t = w:title()
@@ -52,30 +28,6 @@ function toggleSelect()
 end
 
 invert = {[true] = false, [false]= true}
-
-function openElements() 
-  -- openDevToolsPanel("1")
-  -- devtoolsState = 'elementsMenu'
-  ensurePanel('elements')
-  navigationKeyboard()
-  mouseLeftHalf()
-end
-
-
-function doConsoleLog() 
-  ensurePanel('console')
-  tabSelect(11)
-  navigationKeyboard()
-  mouseCenter()
-end
-
-function doApplication() 
-  ensurePanel('application')
-  tabSelect(4)
-  navigationKeyboard()
-  mouseCenter()
-end
-
 function clickMenuSelect(n)
   hs.eventtap.keyStroke("","space", 50000)
   repeatDown(n)
@@ -212,49 +164,3 @@ function tabRepeat(n, d)
   end
 end
 -- mouse positioning
-
-function mouseCenter()
-  w = hs.window.find("DevTools")
-  r = w:frame()
-  c = {x = r.x+r.w/2, y =r.y+r.h/2}
-  -- print("center",c.x,c.y)
-  hs.mouse.setAbsolutePosition(c)
-end
-
-function mouseLeftHalf()
-  w = hs.window.find("DevTools")
-  r = w:frame()
-  c = {x = r.x+(r.w/2-(r.w/4)), y =r.y+r.h/2}
-  hs.mouse.setAbsolutePosition(c)
-end
-
-function mouseStyles()
-  w = hs.window.find("DevTools")
-  r = w:frame()
-  c = {x = r.x+(r.w)-10, y = r.y+r.h/2}
-  hs.mouse.setAbsolutePosition(c)
-end
-
-function clickCenter()
-  w = hs.window.find("DevTools")
-  r = w:frame()
-  c = {x = r.x+r.w/2, y =r.y+r.h/2}
-  print("center",c.x,c.y)
-  hs.eventtap.leftClick(c, 500000)
-end
-
-function clickElements()
-  w = hs.window.find("DevTools")
-  r = w:frame()
-  c = {x = r.x+20, y =r.y+200}
-  print("loc",c.x,c.y)
-  hs.eventtap.leftClick(c, 500000)
-end
-
-function clickNetworkRequests()
-  w = hs.window.find("DevTools")
-  r = w:frame()
-  c = {x = r.x+15, y =r.y+110}
-  print("loc",c.x,c.y)
-  hs.eventtap.leftClick(c, 500000)
-end

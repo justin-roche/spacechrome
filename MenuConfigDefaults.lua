@@ -5,6 +5,7 @@ dofile(spoonPath.."chrome/chrome.lua")
 dofile(spoonPath.."chrome/panels.lua")
 dofile(spoonPath.."chrome/enter.lua")
 dofile(spoonPath.."chrome/mouse.lua")
+dofile(spoonPath.."chrome/window.lua")
 
 dofile(spoonPath.."menus/elementsMenu.lua")
 dofile(spoonPath.."menus/panelsMenu.lua")
