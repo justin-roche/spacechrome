@@ -1,18 +1,21 @@
 
 spoonPath = hs.spoons.scriptPath()
 
-dofile(spoonPath.."/chromeSupport.lua")
-dofile(spoonPath.."/elementsMenu.lua")
-dofile(spoonPath.."/panelsMenu.lua")
-dofile(spoonPath.."/commandMenu.lua")
-dofile(spoonPath.."/consoleMenu.lua")
-dofile(spoonPath.."/consoleNavMenu.lua")
-dofile(spoonPath.."/sourcesMenu.lua")
-dofile(spoonPath.."/networkMenu.lua")
-dofile(spoonPath.."/applicationMenu.lua")
+dofile(spoonPath.."chrome/chrome.lua")
+dofile(spoonPath.."chrome/panels.lua")
+dofile(spoonPath.."chrome/enter.lua")
+dofile(spoonPath.."chrome/mouse.lua")
 
-dofile(spoonPath.."/windowsMenu.lua")
-dofile(spoonPath.."/chromeMenu.lua")
+dofile(spoonPath.."menus/elementsMenu.lua")
+dofile(spoonPath.."menus/panelsMenu.lua")
+dofile(spoonPath.."menus/commandMenu.lua")
+dofile(spoonPath.."menus/consoleMenu.lua")
+dofile(spoonPath.."menus/consoleNavMenu.lua")
+dofile(spoonPath.."menus/sourcesMenu.lua")
+dofile(spoonPath.."menus/networkMenu.lua")
+dofile(spoonPath.."menus/applicationMenu.lua")
+dofile(spoonPath.."menus/windowsMenu.lua")
+dofile(spoonPath.."menus/chromeMenu.lua")
 ----------------------------------------------------------------------------------------------------
 --------------------------------------- General Config ---------------------------------------------
 ----------------------------------------------------------------------------------------------------
