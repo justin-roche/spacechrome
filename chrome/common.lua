@@ -1,12 +1,37 @@
 
 function tabSelect(n)
-  toggleSelect()
+  if devtoolsType == 'web' then
+    toggleSelect()
+  else
+    toggleSettings()
+  end
   tabRepeat(tostring(n))
 end
 
-function search() 
-  normalKeyboard()
-  hs.eventtap.keyStroke("cmd", "f")
+function toggleSelect()
+  win = hs.window.find("DevTools")
+  r = win:frame()
+  c = {x = r.x+20, y =r.y+25}
+  print("toggle",c.x,c.y)
+  hs.eventtap.leftClick(c, 500000)
+  hs.eventtap.leftClick(c, 500000)
+end
+
+function toggleSettings()
+  win = hs.window.find("DevTools")
+  r = win:frame()
+  c = {x = (r.x + r.w)-15, y =r.y+25}
+  -- print("toggle",c.x,c.y)
+  hs.eventtap.leftClick(c, 500000)
+  hs.eventtap.leftClick(c, 500000)
+  backtabRepeat(3)
+end
+
+function clickMenuSelect(n)
+  hs.eventtap.keyStroke("","space", 50000)
+  repeatDown(n)
+  -- hs.eventtap.keyStroke("","down")
+  hs.eventtap.keyStroke("","space",50000)
 end
 
 function executeCommand(s, down)
@@ -22,20 +47,8 @@ function executeCommand(s, down)
   print("returned")
 end
 
-function toggleSelect()
-  win = hs.window.find("DevTools")
-  r = win:frame()
-  c = {x = r.x+20, y =r.y+25}
-  print("toggle",c.x,c.y)
-  hs.eventtap.leftClick(c, 500000)
-  hs.eventtap.leftClick(c, 500000)
-end
-
-
-function clickMenuSelect(n)
-  hs.eventtap.keyStroke("","space", 50000)
-  repeatDown(n)
-  -- hs.eventtap.keyStroke("","down")
-  hs.eventtap.keyStroke("","space",50000)
+function search() 
+  normalKeyboard()
+  hs.eventtap.keyStroke("cmd", "f")
 end
 

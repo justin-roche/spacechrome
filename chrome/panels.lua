@@ -1,22 +1,5 @@
 
-function ensureDevTools() 
-  w = hs.window.find("DevTools")
-  if w == null then
-    hs.eventtap.keyStroke("cmd alt", "i", 500000)
-    ensureUndocked()
-  else
-    hs.window.focus(w)
-  end
-  getDevToolsType()
-end
-
-function getDevToolsType()
-  w = hs.window.find("DevTools")
-  t = w:title()
-  print("t",t)
-end
-
-panelNames = {
+panelNamesWeb = {
   ['elements'] = 1,
   ['memory'] = 2,
   ['sources'] = 3,
@@ -26,8 +9,23 @@ panelNames = {
   ['application'] = 7,
 }
 
+panelNamesNode = {
+  ['connection'] = 1,
+  ['memory'] = 2,
+  ['sources'] = 3,
+  ['console'] = 4,
+  ['profiler'] = 5,
+}
+
 function ensurePanel(name)
-  number = panelNames[name]
+  print("devtoolstype" , devtoolsType)
+  local panels
+  if devtoolsType == 'web' then
+    panels = panelNamesWeb
+  else
+    panels = panelNamesNode
+  end
+  number = panels[name]
   print("ensuring panel", name, number)
   hs.eventtap.keyStroke("cmd", tostring(number))
   devtoolsState = "chrome_"..name.."Menu"

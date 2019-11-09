@@ -2,7 +2,7 @@ chrome_consoleMenuItems = {
   {cons.cat.action, '', 'c', "command line", {
      {cons.act.func,
       function() 
-        ensureConsolePanel()
+        ensurePanel('console')
         toggleSelect()
         tabRepeat("12")
         normalKeyboard()
@@ -15,7 +15,7 @@ chrome_consoleMenuItems = {
   {cons.cat.action, '', 'f', "filter", {
      {cons.act.func,
       function() 
-        ensureConsolePanel()
+        ensurePanel('console')
         tabSelect(8)
       end
   }}},
@@ -45,7 +45,7 @@ chrome_consoleMenuItems = {
   {cons.cat.action, '', 'x', "clear", {
      {cons.act.func,
       function() 
-        ensureConsolePanel()
+        ensurePanel('console')
         hs.eventtap.keyStroke("control","l")
       end
   }}}
