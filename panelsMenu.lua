@@ -1,7 +1,7 @@
-spoonPath = hs.spoons.scriptPath()
-dofile(spoonPath.."/chromeSupport.lua")
+-- spoonPath = hs.spoons.scriptPath()
+-- dofile(spoonPath.."/chromeSupport.lua")
 
-panelsMenuItems = {
+chrome_panelsMenuItems = {
   {cons.cat.action, '', 'E', "Elements", {
      {cons.act.func,
       function() 

@@ -1,4 +1,5 @@
 devtoolsState = 'elementsMenu'
+devtoolsType = 'web'
 
 -- window management
 function toggleDock()
@@ -20,8 +21,14 @@ function ensureDevTools()
     ensureUndocked()
   else
     hs.window.focus(w)
-    -- hs.eventtap.keyStroke("cmd", "3")
   end
+getDevToolsType()
+end
+
+function getDevToolsType()
+  w = hs.window.find("DevTools")
+  t = w:title()
+  print("t",t)
 end
 
 function openDevToolsPanel(number) 
