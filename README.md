@@ -1,4 +1,4 @@
 # spacechrome
 spacemacs interface for chrome
 
-Forked from https://github.com/FryJay/MenuHamme
+Forked from https://github.com/FryJay/MenuHammer
