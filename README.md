@@ -1,9 +1,9 @@
 # spacechrome
-Spacemacs interface for Chrome
+Spacemacs-like interface for controlling Chrome DevTools
 
 This is a chrome-specific fork of MenuHammer: https://github.com/FryJay/MenuHammer
 
-It adds menus and actions for controlling Chrome devTools. It also adds:
+It adds menus and actions for controlling Chrome DevTools. It also adds:
 
 (1) support for minor modes, accessed via ",". Each minor mode is associated with a devTools panel.
 (2) an enterFunction, run on each submenu when it is opened
