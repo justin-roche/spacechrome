@@ -1,5 +1,7 @@
 
 spoonPath = hs.spoons.scriptPath()
+
+dofile(spoonPath.."/chromeSupport.lua")
 dofile(spoonPath.."/elementsMenu.lua")
 dofile(spoonPath.."/panelsMenu.lua")
 dofile(spoonPath.."/commandMenu.lua")
@@ -300,7 +302,6 @@ menuHammerMenuList = {
       enterFunction = function()
         sourcesEval()
       end,
-
       parentMenu = chrome_sourcesMenu,
       menuHotkey = nil,
       menuItems = chrome_consoleNavMenuItems
