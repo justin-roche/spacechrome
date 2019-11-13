@@ -8,7 +8,7 @@ chrome_panelsMenuItems = {
         openDevToolsPanel("1")
         devtoolsState = 'elementsMenu'
         navigationKeyboard()
-        mouseLeftHalf()
+        mouseLeftHalfDevtools()
       end
   }}},
   {cons.cat.action, '', 'C', "Console", {
@@ -17,7 +17,7 @@ chrome_panelsMenuItems = {
         devtoolsState = 'consoleMenu'
         openDevToolsPanel("4")
         navigationKeyboard()
-        mouseLeftHalf()
+        mouseLeftHalfDevtools()
       end
   }}},
   {cons.cat.action, '', 'S', "Sources", {
@@ -26,7 +26,7 @@ chrome_panelsMenuItems = {
         devtoolsState = 'sourcesMenu'
         openDevToolsPanel("3")
         navigationKeyboard()
-        mouseLeftHalf()
+        mouseLeftHalfDevtools()
       end
   }}},
   {cons.cat.action, '', 'N', "Network", {

@@ -8,6 +8,13 @@ function mouseCenter()
 end
 
 function mouseLeftHalf()
+  w = hs.window.focusedWindow()
+  r = w:frame()
+  c = {x = r.x+(r.w/2-(r.w/4)), y =r.y+r.h/2}
+  hs.mouse.setAbsolutePosition(c)
+end
+
+function mouseLeftHalfDevtools()
   w = hs.window.find("DevTools")
   r = w:frame()
   c = {x = r.x+(r.w/2-(r.w/4)), y =r.y+r.h/2}
@@ -40,7 +47,18 @@ end
 function clickNetworkRequests()
   w = hs.window.find("DevTools")
   r = w:frame()
-  c = {x = r.x+15, y =r.y+110}
+  c = {x = r.x+15, y =r.y+190}
   print("loc",c.x,c.y)
   hs.eventtap.leftClick(c, 500000)
+end
+
+function clickNetworkHeaders()
+  clickNetworkRequests()
+  navigationKeyboard()
+  w = hs.window.find("DevTools")
+  r = w:frame()
+  c = {x = r.x+r.w-20, y =r.y+200}
+  print("loc",c.x,c.y)
+  hs.eventtap.leftClick(c, 500000)
+  backtabRepeat(5)
 end

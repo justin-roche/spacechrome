@@ -3,6 +3,7 @@ function ensureDevTools()
   w = hs.window.find("DevTools")
   if w == null then
     hs.eventtap.keyStroke("cmd alt", "i", 500000)
+    print("cmd-alt-i")
     ensureUndocked()
   else
     hs.window.focus(w)

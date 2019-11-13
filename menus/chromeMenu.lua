@@ -3,9 +3,11 @@ local hammerspoonMenu = "elementsMenu"
 local consoleMenu = "consoleMenu"
 local commandsMenu = "commandsMenu"
 local panelsMenu = "panelsMenu"
+local mouseMenu = "mouseMenu"
+local chrome_mouseMenu = "chrome_mouseMenu"
 local networkMenu = "networkMenu"
 local sourcesMenu = "sourcesMenu"
-local windowsMenu = "windowsMenu"
+local chrome_windowsMenu = "chrome_windowsMenu"
 
 chromeMenuItems = {
   {cons.cat.action, '', 'q', "close devtools", {
@@ -15,10 +17,18 @@ chromeMenuItems = {
         hs.eventtap.keyStroke("cmd","w")
       end
   }}},
+
   {cons.cat.action, '', 'R', 'Reload', {
      {cons.act.func,
       function() 
         hs.eventtap.keyStroke("command", "r")
+      end
+     }
+  }},
+  {cons.cat.action, 'shift', 'R', 'Hard Reload', {
+     {cons.act.func,
+      function() 
+        hs.eventtap.keyStroke("command shift", "r")
       end
      }
   }},
@@ -55,7 +65,6 @@ chromeMenuItems = {
         enterNetworkPanel()
       end
      }
-     -- {cons.act.menu, networkMenu}
   }},
   {cons.cat.action, '', 'A', 'Application', {
      {cons.act.func,
@@ -63,7 +72,6 @@ chromeMenuItems = {
         enterApplicationPanel()
       end
      }
-     -- {cons.act.menu, networkMenu}
   }},
   {cons.cat.action, '', 'l', "go line", {
      {cons.act.func,
@@ -71,8 +79,12 @@ chromeMenuItems = {
         hs.eventtap.keyStroke("control","g")
       end
   }}},
+
   {cons.cat.submenu, '', 'W', 'Windows', {
-     {cons.act.menu, windowsMenu}
+     {cons.act.menu, chrome_windowsMenu}
+  }},
+  {cons.cat.submenu, '', 'M', 'Mouse', {
+     {cons.act.menu, chrome_mouseMenu}
   }},
   {cons.cat.action, '', ';', 'Command', {
      {cons.act.func,

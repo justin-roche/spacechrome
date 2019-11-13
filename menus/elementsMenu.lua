@@ -7,7 +7,7 @@ chrome_elementsMenuItems = {
         toggleSelect() 
         tabRepeat(4)
         navigationKeyboard()
-        mouseLeftHalf()
+        mouseLeftHalfDevtools()
       end
      }
   }},

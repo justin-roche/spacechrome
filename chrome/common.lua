@@ -1,3 +1,8 @@
+function tabPath(path)
+  n = tabPaths[path]
+  print("p", p)
+  tabSelect(n)
+end
 
 function tabSelect(n)
   if devtoolsType == 'web' then

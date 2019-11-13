@@ -1,17 +1,5 @@
 
-function enterElementsPanel() 
-  ensureDevTools()
-  ensurePanel('elements')
-  navigationKeyboard()
-  mouseLeftHalf()
-end
-
-function enterSourcesPanel()
-  ensureDevTools()
-  ensurePanel('sources')
-  tabSelect(8)
-end
-
+-- navigation mode
 function enterConsolePanel() 
   ensureDevTools()
   ensurePanel('console')
@@ -20,12 +8,24 @@ function enterConsolePanel()
   mouseCenter()
 end
 
+function enterElementsPanel() 
+  ensureDevTools()
+  ensurePanel('elements')
+  navigationKeyboard()
+  mouseLeftHalfDevtools()
+end
+
+-- normal mode
+function enterSourcesPanel()
+  ensureDevTools()
+  ensurePanel('sources')
+  tabSelect(8)
+end
+
 function enterNetworkPanel() 
   ensureDevTools()
+  print("ensured devtools")
   ensurePanel('network')
-  tabSelect(11)
-  navigationKeyboard()
-  mouseCenter()
 end
 
 function enterApplicationPanel() 

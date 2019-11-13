@@ -11,7 +11,6 @@ chrome_consoleMenuItems = {
   {cons.cat.action, '', 'l', "log", {
      {cons.act.func, enterConsolePanel
   }}},
-
   {cons.cat.action, '', 'f', "filter", {
      {cons.act.func,
       function() 

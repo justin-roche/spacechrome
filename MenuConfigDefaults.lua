@@ -12,9 +12,11 @@ dofile(spoonPath.."menus/sourcesMenu.lua")
 dofile(spoonPath.."menus/networkMenu.lua")
 dofile(spoonPath.."menus/applicationMenu.lua")
 dofile(spoonPath.."menus/windowsMenu.lua")
+dofile(spoonPath.."menus/mouseMenu.lua")
 dofile(spoonPath.."menus/chromeMenu.lua")
 
 dofile(spoonPath.."chrome/chrome.lua")
+dofile(spoonPath.."chrome/paths.lua")
 dofile(spoonPath.."chrome/panels.lua")
 dofile(spoonPath.."chrome/enter.lua")
 dofile(spoonPath.."chrome/mouse.lua")
@@ -229,7 +231,9 @@ local chrome_networkMenu = "chrome_networkMenu"
 local chrome_applicationMenu = "chrome_applicationMenu"
 local chrome_commandsMenu = "chrome_commandsMenu"
 local chrome_panelsMenu = "chrome_panelsMenu"
+-- local chrome_panelsMenu = "chrome_mouseMenu"
 local chrome_windowsMenu = "chrome_windowsMenu"
+local chrome_mouseMenu = "chrome_mouseMenu"
 
 menuHammerMenuList = {
 
@@ -305,6 +309,11 @@ menuHammerMenuList = {
       parentMenu = chromeMenu,
       menuHotkey = nil,
       menuItems = chrome_sourcesMenuItems
+    },
+    chrome_mouseMenu = {
+      parentMenu = chromeMenu,
+      menuHotkey = nil,
+      menuItems = chrome_mouseMenuItems
     },
     chrome_consoleMenu = {
       parentMenu = chromeMenu,
