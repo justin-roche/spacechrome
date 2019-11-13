@@ -7,6 +7,13 @@ function mouseCenter()
   hs.mouse.setAbsolutePosition(c)
 end
 
+function mouseRightHalf()
+  w = hs.window.focusedWindow()
+  r = w:frame()
+  c = {x = r.x+(r.w/2+(r.w/4)), y =r.y+r.h/2}
+  hs.mouse.setAbsolutePosition(c)
+end
+
 function mouseLeftHalf()
   w = hs.window.focusedWindow()
   r = w:frame()
